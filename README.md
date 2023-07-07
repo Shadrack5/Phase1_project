@@ -82,4 +82,4 @@ The website utilizes Materialize CSS for its design and styling.
 
 ## Author's Info
 
-Shadrack Kibet
+Shadrack Kibett
