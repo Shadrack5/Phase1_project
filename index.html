@@ -1,22 +1,386 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auctioning and Bidding Web app</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
-</head>
-<body>
-    <div class="logo">
-        <img src="./img/logo.png" alt="" height="70">
-    </div>
-    <div>
-        <div class="wrapper bg-dark-white">
-            <div class="container1">
-                
-            </div>
+<!doctype html>
+<html class="no-js" lang="en">
 
-        </div>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Aunction Product</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	 crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="/static/style.css">
+
+	<link rel="shortcut icon" type="image/x-icon" href="/static/img/Webp.net-resizeimage.png">
+	<!-- Place favicon.ico in the root directory -->
+
+	<!-- Google Font -->
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+
+	<!-- all css here -->
+	<!-- bootstrap v3.3.6 css -->
+	<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="/static/css/animate.css">
+	<!-- jquery-ui.min css -->
+	<link rel="stylesheet" href="/static/css/jquery-ui.min.css">
+	<!-- meanmenu css -->
+	<link rel="stylesheet" href="/static/css/meanmenu.min.css">
+	<!-- nivo-slider css -->
+	<link rel="stylesheet" href="/static/lib/css/nivo-slider.css">
+	<link rel="stylesheet" href="/static/lib/css/preview.css">
+	<!-- slick css -->
+	<link rel="stylesheet" href="/static/css/slick.css">
+	<!-- lightbox css -->
+	<link rel="stylesheet" href="/static/css/lightbox.min.css">
+	<!-- material-design-iconic-font css -->
+	<link rel="stylesheet" href="/static/css/material-design-iconic-font.css">
+	<!-- All common css of theme -->
+	<link rel="stylesheet" href="/static/css/default.css">
+	<!-- shortcode css -->
+	<link rel="stylesheet" href="/static/css/shortcode.css">
+	<!-- responsive css -->
+	<link rel="stylesheet" href="/static/css/responsive.css">
+	<!-- modernizr css -->
+	<script src="/static/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+	<!-- <nav class="navbar navbar-expand-lg  static-top">
+		
+			<a class="navbar-brand" href="#">
+				<img id="logo" src="/static/img/logo.jpeg" height="20">
+			</a>
+		
+	</nav> -->
+
+	<!-- Page Content -->
+	<!-- /.container -->
+	<!-- WRAPPER START -->
+	<div class="wrapper bg-dark-white">
+		<div class="container1">
+			<center>
+				<a href="" >
+				<img src="/static/img/banner1.png" id="image5" height="50">
+				</a>
+			</center>
+		</div>
+		<!-- PRODUCT-AREA START -->
+		<div class="product-area single-pro-area pt-80 pb-80 product-style-2">
+			<div class="container">
+				<div class="row shop-list single-pro-info no-sidebar">
+					<!-- Single-product start -->
+					<div class="col-lg-12">
+						<div class="single-product clearfix">
+							<!-- Single-pro-slider Big-photo start -->
+							<div class="single-pro-slider single-big-photo view-lightbox slider-for">
+								<div>
+									<img src="/static/img/12.jpg" alt="" />
+									<a class="view-full-screen" href="/static/img/12.jpg" data-lightbox="roadtrip"
+									 data-title="Product image">
+										<i class="zmdi zmdi-zoom-in"></i>
+									</a>c
+								</div>
+
+							</div>
+							<!-- Single-pro-slider Big-photo end -->
+							<div class="product-info">
+								<div class="fix">
+									<h1 class="post-title floatleft">TOSHIBA LED 32″ HD TV with USB movie</h1>
+									<div itemprop="offers">
+                                            <p class="price"><span class="auction-price current-bid"data-status="running">
+                                                <span class="current auction">Auction Status :</span>
+                                                <span class="amount">
+                                                    <span class="Price-currencySymbol">{{max}}</span> open</span>
+                                                </span>
+                                            </p>
+                                        </div>
+								</div>
+
+								<div class="clearfix">
+									<br>
+									<p class="post-title floatleft" style="font-size: 30px; color:red">Remaining time : &nbsp; </p>
+									<p id="demo" style="font-size: 30px; text-align : left; color:red;margin-top:-10px"></p>
+								</div>
+								<br>
+
+								<div class="product-description">
+									<p style="font-size:20px">Toshiba offers you an amazing selection with uncompromising image quality. Its technologies have been specially developed to reproduce realistic images</p>
+								</div>
+
+								<form class="form-inline">
+									<div style="margin: 25px 70px">
+										<button type="button" style="font-size: 20px;border-radius: 10px;color:yellow;background-color: rgb(8, 8, 8);"
+										 class="btn" id="btn1">&nbsp;+5000&nbsp;</button>&nbsp;&nbsp;&nbsp;&nbsp;
+										<button type="button" style="font-size: 20px;color:yellow; background-color: rgb(8, 8, 8);border-radius: 10px;box-shadow: 0 8px 16px 0 rgb(241, 239, 239), 0 6px 20px 0 rgb(241, 239, 239);"
+										 class="btn" id="btn2">+10000</button>&nbsp;&nbsp;&nbsp;&nbsp;
+										<button type="button" style="font-size: 20px;color:yellow; background-color: rgb(8, 8, 8);border-radius: 10px;box-shadow: 0 8px 16px 0 rgb(241, 239, 239), 0 6px 20px 0 rgb(241, 239, 239);"
+										 class="btn" id="btn3">+15000</button>
+									</div>
+									<div class="form-group mx-sm-3 mb-2" id="test">
+										<label for="prix" style="font-size:20px">Bid directly &nbsp;</label><br>
+										<input type="number" class="form-control" id="prix" value="0">
+									</div>
+									<button type="button" class="btn valide btn-primary" id="btnSub" style="border-radius: 12px; background-color: rgb(8, 8, 8); margin-top:6px">Place Bid</button>
+								</form>
+								<br>
+								<h4 class="post-title floatleft">Next auction:&nbsp;</h4>
+								<br>
+								<!-- Single-pro-slider Small-photo start -->
+								<div class="single-pro-slider single-sml-photo slider-nav">
+									<div>
+										<img src="/static/img/single-product/small/3.jpg" />
+										<div style="text-align:center;"><br>
+											<button type="button" class="btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="border-radius: 12px;background-color: rgb(8, 8, 8)">Remind me</button>
+										</div>
+									</div>
+									<div>
+										<img src="/static/img/single-product/small/4.jpg" />
+										<div style="text-align:center;"><br>
+											<button type="button" class="btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="border-radius: 12px;background-color: rgb(8, 8, 8)">Remind me</button>
+										</div>
+									</div>
+									<div>
+										<img src="/static/img/single-product/small/5.jpg" />
+										<div style="text-align:center;"><br>
+											<button type="button" class="btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="border-radius: 12px;background-color: rgb(8, 8, 8)">Remind me</button>
+										</div>
+									</div>
+									<div>
+										<img src="/static/img/single-product/small/6.jpg" />
+										<div style="text-align:center;"><br>
+											<button type="button" class="btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="border-radius: 12px;background-color: rgb(8, 8, 8)">Remind me</button>
+										</div>
+									</div>
+									<div>
+										<img src="/static/img/single-product/small/2.jpg" />
+										<div style="text-align:center;"><br>
+											<button type="button" class="btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="border-radius: 12px;background-color: rgb(8, 8, 8)">Remind me</button>
+										</div>
+									</div>
+								</div>
+								<!-- Single-pro-slider Small-photo end -->
+							</div>
+						</div>
+					</div>
+					<!-- Single-product end -->
+				</div>
+				<!-- single-product-tab start -->
+				<div class="single-pro-tab">
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+							<div class="single-pro-tab-menu">
+								<!-- Nav tabs -->
+								<ul class="">
+									<li><a href="#description" data-toggle="tab">Description</a></li>
+									<li class="active"><a href="#reviews" data-toggle="tab">History</a></li>
+									<li><a href="#information" data-toggle="tab">Contact us</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+							<!-- Tab panes -->
+							<div class="tab-content">
+								<div class="tab-pane" id="description">
+									<div class="pro-tab-info pro-description">
+										<h3 class="tab-title title-border mb-30">TOSHIBA LED 32″ HD TV with USB Movie</h3>
+										<p>Toshiba offers you a stunning selection with uncompromising image quality. Its technologies have been specially developed to reproduce realistic images with the highest possible natural detail for an immersive and inspiring visual experience.</p>
+										<h3>High definition multimedia interface</h3>
+										<p>Toshiba televisions are equipped with an HDMI terminal to facilitate fully digital uncompressed video and audio connections, which support high definition video signals and multi-channel audio signals. Thanks to HDMI technology, you benefit from ideal all-digital audiovisual reproduction, offering noise-free and high-precision image quality.</p>
+										<h3>Film USB</h3>
+										<p>Toshiba's USB Movie function supports a variety of video playback formats, giving you better playback compatibility on most popular video formats commonly available in the market.</p>
+										<h3>Product features</h3>
+										<ul>
+											<li>Product Type: HDTV</li>
+											<li>Screen Size: 32″ (81cm)</li>
+											<li>Screen technology: DLED</li>
+											<li>Resolution: 1366 x 768 (HD ready)</li>
+											<li>Speaker output: 8 + 8 watts</li>
+											<li>Voltage: 110-240V</li>
+											<li>Clock: Yes</li>
+											<li>Profondeur: 188 mm</li>
+											<li>Internal menu languages: English / Arabic / Russian / Finnish</li>
+											
+										</ul>
+									</div>
+								</div>
+
+								<div class="tab-pane active" id="reviews">
+									<div class="pro-tab-info pro-reviews">
+										<div class="customer-review mb-60">
+											<h3 class="tab-title title-border mb-30">Auction history</h3>
+											<table id="auction-history" class="table">
+												<thead>
+													<tr>
+														<th>Date</th>
+														<th>Bid</th>
+														<th>User</th>
+													</tr>
+												</thead>
+
+												<tbody>
+													{% for item in data %}
+													<tr>
+														<td class="date">{{item.date}}</td>
+														<td class="bid">
+															<span class="amount">
+																<span class="Price-currencySymbol">FCFA&nbsp;</span>{{item.prix}}
+															</span>
+														</td>
+														<td>{{item.nom}}</td>
+													</tr>
+													{% endfor %}
+
+												</tbody>
+
+												<tbody>
+													<tr class="start">
+														<td class="date">2023-05-16 08:00:00</td>
+														<td colspan="3" class="started">Auction started</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane" id="information">
+									<div class="pro-tab-info pro-information">
+										<form action="/upload2" method="POST">
+											<input type="text" class="form-control" name="email" placeholder="Enter E-mail">
+											<textarea rows="6" class="form-control" name="message" placeholder="Enter message"></textarea><br>
+											<button type="submit" class="btn btn" style="border-radius: 12px;color: white; background-color:black; float: right;">Send</button>
+
+											<form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- single-product-tab end -->
+			</div>
+		</div>
+		<!-- PRODUCT-AREA END -->
+
+		<!-- Modal 1 -->
+		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+		 aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="exampleModalLongTitle">Receive an alert at the next auction </h4>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form action="/upload1" method="POST">
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="nom">Surname</label>
+									<input type="text" class="form-control" id="nom" name="nom" placeholder="Enter name">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="prenom">First Name</label>
+									<input type="text" class="form-control" id="prenom" name="prenom" placeholder="Enter last name">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="email">Email</label>
+								<input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+							</div>
+							<div class="form-group">
+								<label for="telephone">Telephone</label>
+								<input type="text" class="form-control" id="telephone" name="numero" placeholder="Enter telephone number">
+							</div>
+							<button type="submit" style="color:white" class="btn btn">Send</button>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal 2 -->
+		<div class="modal fade" id="price" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="bid"></h4>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form action="/upload" method="POST">
+
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="nom">Name</label>
+									<input type="text" class="form-control" id="nom" placeholder="Enter name" name="nom" value={{data1}}>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="email">Email</label>
+								<input type="email" class="form-control" id="inputAddress" placeholder="Enter email" name="email" value={{data2}}>
+							</div>
+							<div class="form-group">
+								<label for="telephone">Telephone</label>
+								<input type="text" class="form-control" id="telephone" placeholder="Enter Telephone no" name="numero" value={{data3}}>
+							</div>
+							<input type="text" style="visibility: hidden" id="input-prix" name="price">
+							<button type="submit" style="color:white" class="btn btn">Bid</button>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- WRAPPER END -->
+
+	<!-- all js here -->
+	<!-- jquery latest version -->
+	<script src="/static/js/vendor/jquery-1.12.0.min.js"></script>
+	<!-- bootstrap js -->
+	<script src="/static/js/bootstrap.min.js"></script>
+	<!-- jquery.meanmenu js -->
+	<script src="/static/js/jquery.meanmenu.js"></script>
+	<!-- slick.min js -->
+	<script src="/static/js/slick.min.js"></script>
+	<!-- jquery.treeview js -->
+	<script src="/static/js/jquery.treeview.js"></script>
+	<!-- lightbox.min js -->
+	<script src="/static/js/lightbox.min.js"></script>
+	<!-- jquery-ui js -->
+	<script src="/static/js/jquery-ui.min.js"></script>
+	<!-- jquery.nivo.slider js -->
+	<script src="/static/lib/js/jquery.nivo.slider.js"></script>
+	<script src="/static/lib/home.js"></script>
+	<!-- jquery.nicescroll.min js -->
+	<script src="/static/js/jquery.nicescroll.min.js"></script>
+	<!-- countdon.min js -->
+	<script src="/static/js/countdon.min.js"></script>
+	<!-- wow js -->
+	<script src="/static/js/wow.min.js"></script>
+	<!-- plugins js -->
+	<script src="/static/js/plugins.js"></script>
+	<!-- main js -->
+	<script src="/static/js/main.js"></script>
+
+	
 </body>
+
 </html>
