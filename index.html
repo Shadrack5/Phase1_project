@@ -125,8 +125,8 @@
 										 class="btn" id="btn3">+15000</button>
 									</div>
 									<div class="form-group mx-sm-3 mb-2" id="test">
-										<label for="prix" style="font-size:20px">Bid directly &nbsp;</label><br>
-										<input type="number" class="form-control" id="prix" value="0">
+										<label for="price" style="font-size:20px">Bid directly &nbsp;</label><br>
+										<input type="number" class="form-control" id="price" value="0">
 									</div>
 									<button type="button" class="btn valide btn-primary" id="btnSub" style="border-radius: 12px; background-color: rgb(8, 8, 8); margin-top:6px">Place Bid</button>
 								</form>
@@ -179,8 +179,8 @@
 							<div class="single-pro-tab-menu">
 								<!-- Nav tabs -->
 								<ul class="">
-									<li><a href="#description" data-toggle="tab">Description</a></li>
-									<li class="active"><a href="#reviews" data-toggle="tab">History</a></li>
+									<li class="active"><a href="#description" data-toggle="tab">Description</a></li>
+									<li ><a href="#reviews" data-toggle="tab" id="bidhistory">History</a></li>
 									<li><a href="#information" data-toggle="tab">Contact us</a></li>
 								</ul>
 							</div>
@@ -188,7 +188,7 @@
 						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
 							<!-- Tab panes -->
 							<div class="tab-content">
-								<div class="tab-pane" id="description">
+								<div class="tab-pane active" id="description">
 									<div class="pro-tab-info pro-description">
 										<h3 class="tab-title title-border mb-30">TOSHIBA LED 32″ HD TV with USB Movie</h3>
 										<p>Toshiba offers you a stunning selection with uncompromising image quality. Its technologies have been specially developed to reproduce realistic images with the highest possible natural detail for an immersive and inspiring visual experience.</p>
@@ -212,7 +212,7 @@
 									</div>
 								</div>
 
-								<div class="tab-pane active" id="reviews">
+								<div class="tab-pane" id="reviews">
 									<div class="pro-tab-info pro-reviews">
 										<div class="customer-review mb-60">
 											<h3 class="tab-title title-border mb-30">Auction history</h3>
@@ -226,17 +226,17 @@
 												</thead>
 
 												<tbody>
-													{% for item in data %}
+													
 													<tr>
-														<td class="date">{{item.date}}</td>
+														<td class="date"></td>
 														<td class="bid">
 															<span class="amount">
-																<span class="Price-currencySymbol">FCFA&nbsp;</span>{{item.prix}}
+																<span class="Price-currencySymbol">KSh&nbsp;</span>
 															</span>
 														</td>
-														<td>{{item.nom}}</td>
+														<td></td>
 													</tr>
-													{% endfor %}
+													
 
 												</tbody>
 
@@ -252,10 +252,10 @@
 								</div>
 								<div class="tab-pane" id="information">
 									<div class="pro-tab-info pro-information">
-										<form action="/upload2" method="POST">
+										<form>
 											<input type="text" class="form-control" name="email" placeholder="Enter E-mail">
 											<textarea rows="6" class="form-control" name="message" placeholder="Enter message"></textarea><br>
-											<button type="submit" class="btn btn" style="border-radius: 12px;color: white; background-color:black; float: right;">Send</button>
+											<button type="submit" class="btn btn" style="border-radius: 12px;color: white; background-color:black; float: right;" id="btncontact1">Send</button>
 
 											<form>
 									</div>
@@ -281,7 +281,7 @@
 						</button>
 					</div>
 					<div class="modal-body">
-						<form action="/upload1" method="POST">
+						<form >
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="nom">Surname</label>
@@ -300,7 +300,7 @@
 								<label for="telephone">Telephone</label>
 								<input type="text" class="form-control" id="telephone" name="numero" placeholder="Enter telephone number">
 							</div>
-							<button type="submit" style="color:white" class="btn btn">Send</button>
+							<button type="submit" style="color:white" class="btn btn" id="btnsend1">Send</button>
 						</form>
 					</div>
 					<div class="modal-footer">
@@ -322,7 +322,7 @@
 						</button>
 					</div>
 					<div class="modal-body">
-						<form action="/upload" method="POST">
+						<form >
 
 							<div class="form-row">
 								<div class="form-group col-md-6">
@@ -338,8 +338,8 @@
 								<label for="telephone">Telephone</label>
 								<input type="text" class="form-control" id="telephone" placeholder="Enter Telephone no" name="numero" value={{data3}}>
 							</div>
-							<input type="text" style="visibility: hidden" id="input-prix" name="price">
-							<button type="submit" style="color:white" class="btn btn">Bid</button>
+							<input type="text" style="visibility: hidden" id="input-price" name="price">
+							<button type="submit" style="color:white" class="btn btn" id="bidbtn1">Bid</button>
 						</form>
 					</div>
 					<div class="modal-footer">
@@ -379,6 +379,7 @@
 	<script src="/static/js/plugins.js"></script>
 	<!-- main js -->
 	<script src="/static/js/main.js"></script>
+	<script src="index.js"></script>
 
 	
 </body>
