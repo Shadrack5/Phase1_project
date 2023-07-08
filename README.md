@@ -25,7 +25,7 @@ This website serves as a digital representation of auctioning and bidding online
 To access the website, follow these steps:
 
 1. https://bids-ruxc.onrender.com/bids
-2.  https://shadrack5.github.io/Phase1_project/
+2.   https://shadrack5.github.io/Phase1_project/
 
 
 ## Technology Used
